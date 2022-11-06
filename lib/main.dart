@@ -11,6 +11,8 @@ class Contact {
   Contact({required this.name}) : id = const Uuid().v4();
 }
 
+// This is just for nothing
+
 class ContactBook extends ValueNotifier<List<Contact>> {
   ContactBook._sharedInstance() : super([]);
   static final _shared = ContactBook._sharedInstance();
