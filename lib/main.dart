@@ -68,6 +68,9 @@ class HomePage extends StatelessWidget {
               itemBuilder: ((context, index) {
                 final contact = contacts[index];
                 return Dismissible(
+                  onDismissed: (direction) {
+                    ContactBook().remove(contact: contact);
+                  },
                   key: ValueKey(contact.id),
                   child: Material(
                     color: Colors.white,
